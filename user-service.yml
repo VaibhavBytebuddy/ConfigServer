@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mariadb://localhost:3306/micro_userdb
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    # Use to disable Eureka registration if needed
+    # enabled: false
+
+server:
+  port: 8081
+
+# Custom properties for JWT
+app:
+  jwt:
+    secret: jkSHs88vnsdfn329dkJsZqPlos82Kz9a
+    expiration: 86400000
